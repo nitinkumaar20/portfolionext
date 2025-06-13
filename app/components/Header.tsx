@@ -55,7 +55,7 @@ const Navbar = () => {
           <a
             key={item.name}
             href={item.href}
-            className="text-[var(--mainColordark)] hover:text-white font-semibold transition"
+            className="text-[var(--mainColordark)] hover:text-black font-semibold transition"
           >
             {item.name}
           </a>
@@ -73,7 +73,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       {isNavOpen && (
-        <div className="fixed inset-0 bg-[var(--mainColordark)] text-white flex flex-col items-center justify-center gap-8 z-[100] text-2xl">
+        <div className="fixed top-0 left-0 w-screen h-screen bg-[var(--mainColordark)] text-white flex flex-col items-center justify-center gap-8 z-50 text-2xl">
           {menuItems.map((item) => (
             <a
               key={item.name}
