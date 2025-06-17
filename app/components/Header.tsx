@@ -29,71 +29,73 @@ const Navbar = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 w-full z-[99] h-20 px-6 md:px-40 flex items-center justify-between transition-all duration-300 text-lg ${
-        isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-300"
-          : ""
-      }`}
-    >
-      {/* Logo */}
-      <div>
-        <a href="#">
-          <Image
-            src="https://drive.google.com/thumbnail?id=1IaAN_QyzOWGfOlVmk33P4Evu5W-jeVj_"
-            alt="Logo"
-            width={56}
-            height={56}
-            className="h-9 w-16"
-          />
+ <header
+  className={`fixed top-0 w-full z-[99] h-16 transition-all duration-300 text-lg ${
+    isScrolled
+      ? "bg-white/80 backdrop-blur-md border-b border-gray-300 "
+      : ""
+  }`}
+>
+  <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 md:px-10 xl:px-20 flex items-center justify-between h-full">
+    {/* Logo */}
+    <a href="#">
+      <Image
+        src="https://drive.google.com/thumbnail?id=1IaAN_QyzOWGfOlVmk33P4Evu5W-jeVj_"
+        alt="Logo"
+        width={56}
+        height={56}
+        className="h-9 w-16 md:h-7 md:w-12 "
+      />
+    </a>
+
+    {/* Desktop nav */}
+    <nav className="hidden md:flex gap-6">
+      {menuItems.map((item) => (
+        <a
+          key={item.name}
+          href={item.href}
+          className="text-[var(--mainColordark)] hover:text-black font-semibold transition md:text-sm"
+        >
+          {item.name}
         </a>
-      </div>
+      ))}
+    </nav>
 
-      {/* Desktop nav */}
-      <nav className="hidden md:flex gap-6">
-        {menuItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="text-[var(--mainColordark)] hover:text-black font-semibold transition"
-          >
-            {item.name}
-          </a>
-        ))}
-      </nav>
+    {/* Mobile Menu Button */}
+    <button
+      className="md:hidden text-3xl text-black"
+      onClick={() => setIsNavOpen(true)}
+      aria-label="Open Menu"
+    >
+      ☰
+    </button>
+  </div>
 
-      {/* Mobile Menu Toggle Button */}
+  {/* Mobile Drawer */}
+  {isNavOpen && (
+    <div className="fixed top-0 left-0 w-screen h-screen bg-[var(--mainColordark)] text-white flex flex-col items-center justify-center gap-8 z-50 text-2xl">
+      {menuItems.map((item) => (
+        <a
+          key={item.name}
+          href={item.href}
+          onClick={() => setIsNavOpen(false)}
+          className="hover:text-yellow-400 transition"
+        >
+          {item.name}
+        </a>
+      ))}
       <button
-        className="md:hidden text-3xl text-[var(--textColor)]"
-        onClick={() => setIsNavOpen(true)}
-        aria-label="Open Menu"
+        onClick={() => setIsNavOpen(false)}
+        className="absolute top-6 right-8 text-4xl"
+        aria-label="Close Menu"
       >
-        ☰
+        ✕
       </button>
+    </div>
+  )}
+</header>
 
-      {/* Mobile Menu Drawer */}
-      {isNavOpen && (
-        <div className="fixed top-0 left-0 w-screen h-screen bg-[var(--mainColordark)] text-white flex flex-col items-center justify-center gap-8 z-50 text-2xl">
-          {menuItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={() => setIsNavOpen(false)}
-              className="hover:text-yellow-400 transition"
-            >
-              {item.name}
-            </a>
-          ))}
-          <button
-            onClick={() => setIsNavOpen(false)}
-            className="absolute top-6 right-8 text-4xl"
-            aria-label="Close Menu"
-          >
-            ✕
-          </button>
-        </div>
-      )}
-    </header>
+
   );
 };
 
