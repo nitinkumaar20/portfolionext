@@ -5,12 +5,18 @@ import React from "react";
 import './globals.css';// This must include your :root CSS
 import AboutMe from "./components/AboutME";
 import './App.css';
+import Services from "./components/Services";
+import Footer from "./components/Footer";
+import Portfolio from "./components/Portfolio";
 export default function Home() {
   return (
     <div >
       <Navbar />
       <HomePage />
       <AboutMe/>
+      <Services/>
+      <Portfolio/>
+      <Footer/>
     </div>
   );
 }

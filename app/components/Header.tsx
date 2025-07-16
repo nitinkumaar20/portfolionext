@@ -36,7 +36,7 @@ const Navbar = () => {
       : ""
   }`}
 >
-  <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 md:px-10 xl:px-20 flex items-center justify-between h-full">
+  <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 md:px-10 xl:px-32 flex items-center justify-between h-full">
     {/* Logo */}
     <a href="#">
       <Image
@@ -44,7 +44,7 @@ const Navbar = () => {
         alt="Logo"
         width={56}
         height={56}
-        className="h-9 w-16 md:h-7 md:w-12 "
+        className="h-9 w-16 md:h-9 md:w-16 "
       />
     </a>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
         <a
           key={item.name}
           href={item.href}
-          className="text-[var(--mainColordark)] hover:text-black font-semibold transition md:text-sm"
+          className="text-[var(--mainColordark)] hover:text-black font-semibold transition md:text-md"
         >
           {item.name}
         </a>
