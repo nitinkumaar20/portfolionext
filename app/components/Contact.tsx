@@ -71,11 +71,12 @@ const Contact = () => {
   return (
     <>
       <ToastContainer />
-      <section id="contact" className="py-16 px-20 md:px-40 ">
+      <section id="contact" className="py-12 px-5
+       lg:px-40 md:px-20 ">
         {success ? (
           <div>
             <div className="text-center mb-8 flex flex-col items-center ">
-                 <ul className="flex gap-3 text-4xl font-bold tracking-widest">
+                 <ul className="flex gap-3 text-3xl lg:text-4xl font-bold tracking-widest">
           {'CONTACT'.split('').map((char, i) => (
             <li key={i}>{char}</li>
           ))}
@@ -147,7 +148,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.1 }}
                   type="submit"
-                  className={`px-6 py-2 text-white bg-teal-400 hover:bg-teal-700 rounded ${
+                  className={`px-6 py-2 text-white bg-green-400 hover:bg-green-700 rounded transition-all duration-300 ${
                     loadershow ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   disabled={loadershow}
@@ -159,7 +160,7 @@ const Contact = () => {
           </div>
         ) : (
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-6 py-10">
-            <h2 className="text-xl font-semibold text-green-700">Message sent successfully</h2>
+            <h2 className="text-xl font-semibold text-green-500">Message sent successfully</h2>
             <IoMdDoneAll className="text-[3rem] text-green-500" />
           </div>
         )}

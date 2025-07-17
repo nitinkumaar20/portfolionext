@@ -41,10 +41,10 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="px-10 lg:px-36 pb-10 flex flex-col items-center overflow-hidden"
+      className="px-5 lg:px-32 pb-10 flex flex-col items-center overflow-hidden"
     >
       <div className="section-heading">
-        <ul className="flex gap-3 text-4xl font-bold tracking-widest">
+        <ul className="flex gap-3 text-2xl lg:text-4xl font-bold tracking-widest">
           {'PORTFOLIO'.split('').map((char, i) => (
             <li key={i}>{char}</li>
           ))}
@@ -57,14 +57,14 @@ const Portfolio = () => {
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-2xl font-medium text-gray-500"
+          className="text-xl md:text-2xl font-medium text-gray-500"
         >
           {"Here's"} my past projects
         </motion.h1>
       </div>
 
       {/* Web Projects */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center py-5">
+      <div className="grid grid-cols-1  md:grid-cols-3 gap-7 justify-center py-7">
         {projects.map((proj, index) => (
           <motion.div
             key={index}
@@ -77,7 +77,7 @@ const Portfolio = () => {
             <img
               src={proj.img}
               alt={proj.title}
-              className="w-full h-full object-cover"
+              className="object-cover h-44 w-[23rem] 2xl:w-[30rem]  2xl:h-[17rem]  object-center border-2 border-teal-300"
             />
             <Link
               href={proj.link}
@@ -93,7 +93,7 @@ const Portfolio = () => {
 
       {/* Graphic Work */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center"
+        className="grid grid-cols-1  md:grid-cols-3 gap-7 justify-center"
         id="graphic-portion"
       >
         {graphics.map((g, i) => (
@@ -108,7 +108,7 @@ const Portfolio = () => {
             <img
               src={g.img}
               alt="graphic-design"
-              className="object-cover"
+              className="object-contain h-44 w-[23rem] 2xl:w-[30rem]  2xl:h-[17rem]  object-center border-2 border-teal-300"
             />
             <Link
               href="https://drive.google.com/drive/folders/1QDu6Hb0GmZlm1tbC2cqaOUDckxY1kBcY"

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section id="section-3" className="py-16 bg-white">
+    <section id="section-3" className="py-12 bg-white">
       {/* Section Heading */}
       <div className="flex justify-center mb-6">
-        <ul className="flex gap-3 text-4xl font-bold  tracking-widest">
+        <ul className="flex gap-3 text-3xl lg:text-4xl font-bold  tracking-widest">
           {["S", "E", "R", "V", "I", "C", "E", "S"].map((letter, idx) => (
             <li key={idx}>{letter}</li>
           ))}
@@ -21,14 +21,14 @@ const Services = () => {
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-2xl font-medium text-gray-500"
+          className="text-xl md:text-2xl font-medium text-gray-500"
         >
           We do awesome services for our clients.
         </motion.h1>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-5 max-w-6xl mx-auto">
         {/* Web Development */}
         <motion.div
           initial={{ scale: 0 }}

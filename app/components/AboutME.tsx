@@ -14,7 +14,7 @@ const AboutMe = () => {
       className="overflow-hidden px-4 sm:px-10 md:px-20 lg:px-40 pb-10"
       id="section-2"
     >
-      <motion.div className="flex justify-center mb-8">
+      <motion.div className="flex justify-center mb-4">
         <ul className="flex flex-wrap gap-2 text-xl md:text-4xl font-bold text-gray-800">
           {["A", "B", "O", "U", "T", "M", "E"].map((char, idx) => (
             <li key={idx} className="mx-2 sm:mx-4 mt-6">
@@ -33,7 +33,7 @@ const AboutMe = () => {
               alt="Nitin Kumar"
               width={448}
               height={528}
-              className=" h-[36rem] w-[25rem] object-cover "
+              className=" h-[22rem] w-[20rem] object-cover rounded-xl"
             />
           </div>
         </div>
@@ -65,7 +65,7 @@ const AboutMe = () => {
             </motion.h1>
 
             <motion.h3
-              className="text-2xl font-bold text-teal-500"
+              className="text-2xl font-bold text-teal-500 mb-3" 
               variants={variants}
               transition={{ duration: 0.3 }}
             >
