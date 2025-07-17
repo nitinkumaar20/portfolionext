@@ -100,7 +100,7 @@ export const Home: React.FC = () => {
           alt="Profile"
           width={624}
           height={560}
-          className="rounded-full w-[10rem] h-[20rem] md:w-[8rem] md:h-[16rem] lg:w-[24rem] lg:h-[23rem] object-cover  border-4 "
+          className="rounded-full w-[20rem] h-[20rem] md:w-[8rem] md:h-[16rem] lg:w-[24rem] lg:h-[23rem] object-cover  border-4 "
         />
       </motion.div>
     </section>
