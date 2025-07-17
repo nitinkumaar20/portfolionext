@@ -22,12 +22,12 @@ export const InputItem: React.FC<InputItemProps> = ({
   onChangeData,
 }) => {
   return (
-    <div className="w-full md:w-1/2 flex flex-col items-start gap-1 my-2">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+    <div className="w-full  flex flex-col items-start  my-1 ">
+      <label htmlFor={id} className="text-md font-medium text-gray-600">
         {input}
       </label>
       <input
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
         id={id}
         name={name}
         type={type}

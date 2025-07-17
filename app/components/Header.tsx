@@ -13,7 +13,7 @@ const Navbar = () => {
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
-      setIsScrolled(scrollPercent > 10);
+      setIsScrolled(scrollPercent > 1);
     };
 
     window.addEventListener("scroll", handleScroll);

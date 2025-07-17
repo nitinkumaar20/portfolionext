@@ -5,7 +5,7 @@ import { IoMdDoneAll } from "react-icons/io";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {InputItem} from "./InputItem"; // make sure this uses Tailwind too
+import { InputItem } from "./InputItem"; // Ensure this uses Tailwind
 
 const Contact = () => {
   const [message, setMessage] = useState({
@@ -19,38 +19,68 @@ const Contact = () => {
   const [loadershow, setLoadershow] = useState(false);
   const form = useRef<HTMLFormElement | null>(null);
 
-  const data = {
-    from_name: `${message.Fname} ${message.Lname}`,
-    from_email: message.email,
-    to_name: "Nitin Kumar",
-    messagdsd: message.message,
-  };
-
-  const sendEmail = (e: FormEvent) => {
-    e.preventDefault();
-
-    if (
-      localStorage.getItem("email") !== message.email ||
-      localStorage.getItem("email") === null
-    ) {
-      
-    } else {
-      toast.warning("Message already sent with this email.");
-    }
-  };
-
   const onchange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+
+    // Prevent duplicate submission
+    const emailSent = localStorage.getItem("email");
+    if (emailSent === message.email) {
+      toast.warning("Message already sent with this email.");
+      return;
+    }
+
+    setLoadershow(true);
+
+    try {
+      const res = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          first_name: message.Fname,
+          last_name: message.Lname,
+          phone_no: message.phone,
+          email: message.email,
+          message: message.message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("Message sent successfully.");
+        setSuccess(false);
+        localStorage.setItem("email", message.email);
+      } else {
+        data.errors?.forEach((err: { message: string }) => {
+          toast.error(err.message);
+        }) || toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoadershow(false);
+    }
   };
 
   return (
     <>
       <ToastContainer />
-      <section id="contact" className="py-16 px-4 md:px-20 bg-white">
+      <section id="contact" className="py-16 px-20 md:px-40 ">
         {success ? (
           <div>
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-green-700">CONTACT</h1>
+            <div className="text-center mb-8 flex flex-col items-center ">
+                 <ul className="flex gap-3 text-4xl font-bold tracking-widest">
+          {'CONTACT'.split('').map((char, i) => (
+            <li key={i}>{char}</li>
+          ))}
+        </ul>
+              {/* <h1 className="text-3xl font-bold text-green-300">CONTACT</h1> */}
             </div>
 
             <motion.form
@@ -96,7 +126,7 @@ const Contact = () => {
               />
 
               <div className="col-span-1 md:col-span-2">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="block text-md font-medium text-gray-600 mb-1">
                   Message
                 </label>
                 <textarea
@@ -106,7 +136,7 @@ const Contact = () => {
                   placeholder="Enter message"
                   value={message.message}
                   onChange={onchange}
-                  className="w-full border rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
 
@@ -117,26 +147,20 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.1 }}
                   type="submit"
-                  className={`px-6 py-2 text-white bg-green-600 hover:bg-green-700 rounded ${
-                    loadershow ? "hidden" : ""
+                  className={`px-6 py-2 text-white bg-teal-400 hover:bg-teal-700 rounded ${
+                    loadershow ? "opacity-50 cursor-not-allowed" : ""
                   }`}
+                  disabled={loadershow}
                 >
-                  Submit
+                  {loadershow ? "Sending..." : "Submit"}
                 </motion.button>
-
-                {/* <ClipLoader
-                  color="#24fc03"
-                  loading={loadershow}
-                  size={40}
-                  aria-label="Loading Spinner"
-                /> */}
               </div>
             </motion.form>
           </div>
         ) : (
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-6 py-10">
             <h2 className="text-xl font-semibold text-green-700">Message sent successfully</h2>
-            <IoMdDoneAll className="text-[5rem] text-green-500" />
+            <IoMdDoneAll className="text-[3rem] text-green-500" />
           </div>
         )}
       </section>
