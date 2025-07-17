@@ -4,10 +4,8 @@ import { useState, useRef, FormEvent } from "react";
 import { IoMdDoneAll } from "react-icons/io";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
-import emailjs from "@emailjs/browser";
-import ClipLoader from "react-spinners/ClipLoader";
 import "react-toastify/dist/ReactToastify.css";
-import { Inputitem } from "./Inputitem"; // make sure this uses Tailwind too
+import {InputItem} from "./InputItem"; // make sure this uses Tailwind too
 
 const Contact = () => {
   const [message, setMessage] = useState({
@@ -35,23 +33,7 @@ const Contact = () => {
       localStorage.getItem("email") !== message.email ||
       localStorage.getItem("email") === null
     ) {
-      setLoadershow(true);
-
-      emailjs
-        .send("", "", data, {
-          publicKey: "",
-        })
-        .then(() => {
-          localStorage.setItem("email", message.email);
-          setSuccess(false);
-          toast.success("Message sent successfully!");
-          setLoadershow(false);
-        })
-        .catch((error) => {
-          toast.error("Message failed to send.");
-          console.error("Email error:", error);
-          setLoadershow(false);
-        });
+      
     } else {
       toast.warning("Message already sent with this email.");
     }
@@ -76,7 +58,7 @@ const Contact = () => {
               onSubmit={sendEmail}
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              <Inputitem
+              <InputItem
                 input="First Name"
                 value={message.Fname}
                 type="text"
@@ -85,7 +67,7 @@ const Contact = () => {
                 onChangeData={onchange}
               />
 
-              <Inputitem
+              <InputItem
                 input="Last Name"
                 value={message.Lname}
                 type="text"
@@ -94,7 +76,7 @@ const Contact = () => {
                 onChangeData={onchange}
               />
 
-              <Inputitem
+              <InputItem
                 input="Email"
                 value={message.email}
                 type="email"
@@ -103,7 +85,7 @@ const Contact = () => {
                 onChangeData={onchange}
               />
 
-              <Inputitem
+              <InputItem
                 input="Phone No"
                 value={message.phone}
                 type="tel"
@@ -142,12 +124,12 @@ const Contact = () => {
                   Submit
                 </motion.button>
 
-                <ClipLoader
+                {/* <ClipLoader
                   color="#24fc03"
                   loading={loadershow}
                   size={40}
                   aria-label="Loading Spinner"
-                />
+                /> */}
               </div>
             </motion.form>
           </div>

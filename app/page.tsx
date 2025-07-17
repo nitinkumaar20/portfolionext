@@ -8,6 +8,7 @@ import './App.css';
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 export default function Home() {
   return (
     <div >
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutMe/>
       <Services/>
       <Portfolio/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   );

@@ -7,7 +7,7 @@ const Services = () => {
     <section id="section-3" className="py-16 bg-white">
       {/* Section Heading */}
       <div className="flex justify-center mb-6">
-        <ul className="flex gap-2 text-3xl font-bold text-blue-600 tracking-widest">
+        <ul className="flex gap-3 text-4xl font-bold  tracking-widest">
           {["S", "E", "R", "V", "I", "C", "E", "S"].map((letter, idx) => (
             <li key={idx}>{letter}</li>
           ))}
@@ -21,7 +21,7 @@ const Services = () => {
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-3xl font-semibold text-gray-800"
+          className="text-2xl md:text-2xl font-medium text-gray-500"
         >
           We do awesome services for our clients.
         </motion.h1>
@@ -35,17 +35,16 @@ const Services = () => {
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-gray-100 p-6 rounded-lg shadow-md text-center"
+          className="bg-lime-100 p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center"
         >
           <img
             src="https://drive.google.com/thumbnail?id=1t9D5fqHashvYVTIycVnp9u84Y2LmOcqJ&sz=w1000"
             alt="Web Development"
-            className="w-full h-48 object-cover mb-4 rounded"
+            className="w-40 h-42 mb-4 rounded"
           />
           <h2 className="text-xl font-semibold mb-2">Web Development</h2>
           <p className="text-gray-600 text-sm">
-            I provide web development services with trendy technologies like
-            React, Node, Express, MongoDB, and Bootstrap.
+            Crafting modern web experiences with React, Node.js, Express, MongoDB, and Bootstrap – fast, scalable, and beautifully designed
           </p>
         </motion.div>
 
@@ -56,17 +55,16 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           id="photoshop"
-          className="bg-gray-100 p-6 rounded-lg shadow-md text-center"
+          className="bg-lime-100 p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center"
         >
           <img
-            src="https://drive.google.com/thumbnail?id=1vtNs2y-ZnSToZh_FPt0Be1dpKoFGkqlK&sz=w1000"
+            src="https://drive.google.com/thumbnail?id=1vtNs2y-ZnSToZh_FPt0Be1dpKoFGkqlK&sz=w1000 "
             alt="Photoshop Editing"
-            className="w-full h-48 object-cover mb-4 rounded"
+            className="w-40 h-42 mb-4 rounded"
           />
           <h2 className="text-xl font-semibold mb-2">Photoshop Editing</h2>
-          <p className="text-gray-600 text-sm">
-            I provide Photoshop editing and retouching services for Ecommerce and
-            personal use.
+          <p className="text-gray-600 text-sm ">
+           High-quality Photoshop editing and retouching for eCommerce and personal photos.
           </p>
         </motion.div>
 
@@ -77,16 +75,16 @@ const Services = () => {
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-gray-100 p-6 rounded-lg shadow-md text-center"
+          className="bg-lime-100 p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center"
         >
           <img
             src="https://drive.google.com/thumbnail?id=13Ci3ScBkCwTttbtwryur_zAgw0uNck6C&sz=w1000"
             alt="Graphic Design"
-            className="w-full h-48 object-cover mb-4 rounded"
+            className="w-40 h-42 mb-4 rounded"
           />
           <h2 className="text-xl font-semibold mb-2">Graphic Design</h2>
           <p className="text-gray-600 text-sm">
-            I offer graphic design services for branding, Ecommerce graphics, Amazon banners, logos, and more.
+         I design eye-catching graphics for branding, Amazon banners, eCommerce stores, logos, and everything in between
           </p>
         </motion.div>
       </div>

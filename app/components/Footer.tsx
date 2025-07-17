@@ -9,7 +9,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12 px-6 md:px-40" id="footer">
+    <section className="bg-gradient-to-br  from-blue-200 via-lime-200 to-green-100 py-12 px-6 md:px-40" id="footer">
       <footer className="flex flex-col md:flex-row justify-between flex-wrap gap-12">
         {/* Contact and Social Links */}
         <motion.div className="flex-1 min-w-[280px]">
@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <motion.div className="flex-1 min-w-[200px]">
-          <h4 className="text-red-600 font-semibold text-lg mb-4">Quick Links</h4>
+          <h4 className="text-black font-semibold text-lg mb-4">Quick Links</h4>
           <ul className="flex flex-col gap-3 text-base text-gray-900">
             {["Home", "About", "Services", "Portfolio", "Contact"].map((link, idx) => (
               <motion.a
@@ -89,7 +89,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h4 className="text-red-600 font-semibold text-lg mb-4">Our Services</h4>
+          <h4 className="text-black font-semibold text-lg mb-4">Our Services</h4>
           <ul className="flex flex-col gap-3 text-base text-gray-900">
             {["Web Designing & Development", "Photoshop Editing", "Graphic Designing"].map((service, idx) => (
               <motion.a

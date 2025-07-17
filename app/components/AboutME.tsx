@@ -49,7 +49,7 @@ const AboutMe = () => {
             transition={{ duration: 0.5 }}
           >
             <motion.h3
-              className="text-xl font-semibold text-blue-700"
+              className="text-xl font-semibold text-teal-500"
               variants={variants}
               transition={{ duration: 0.7 }}
             >
@@ -65,7 +65,7 @@ const AboutMe = () => {
             </motion.h1>
 
             <motion.h3
-              className="text-2xl font-bold text-blue-600"
+              className="text-2xl font-bold text-teal-500"
               variants={variants}
               transition={{ duration: 0.3 }}
             >
@@ -81,7 +81,7 @@ const AboutMe = () => {
 
             <h6 className="leading-6 text-gray-700 mt-4">
               I have experience in{" "}
-              <span className="text-blue-800 font-semibold">
+              <span className="text-teal-500 font-semibold">
                 Next.js, Tailwind CSS, TypeScript, React.js, Node.js, MongoDB,
                 JavaScript, HTML, CSS, Bootstrap, and Photoshop.
               </span>{" "}

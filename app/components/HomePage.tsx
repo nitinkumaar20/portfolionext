@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
     visible: { x: 0 },
     hidden: { x: -100 },
   };
-
+// w-full bg-gradient-to-br from-teal-200 via-lime-200 to-green-100"
   return (
    <div className="w-full bg-gradient-to-br from-teal-200 via-lime-200 to-green-100">
   <div className="max-w-[1300px] mx-auto">
@@ -71,7 +71,7 @@ export const Home: React.FC = () => {
             href="https://wa.me/"
             target="_blank"
             rel="noopener noreferrer"
-            className="md:px-3 md:py-1 md:text-xs lg:py-1 lg:px-4 text-sm py-1 px-3 rounded-full lg:text-lg font-medium text-white bg-[#013220] hover:bg-[#04563a] shadow-lg transition"
+            className="md:px-3 md:py-1 md:text-xs lg:py-1 lg:px-4 text-sm py-1 px-3 rounded-full lg:text-lg font-medium text-white bg-[#238662] hover:bg-[#04563a] shadow-lg transition"
           >
             Hire Me
           </a>
@@ -79,7 +79,7 @@ export const Home: React.FC = () => {
             href="https://drive.google.com/file/d/1zPmnn8iWWs65JJsfPhhZtZbPcu7DiuoU/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="md:px-3 md:py-1 md:text-xs text-sm lg:py-1 lg:px-4 py-1 px-3 rounded-full lg:text-lg font-medium text-white bg-[#013220] hover:bg-[#04563a] shadow-lg transition"
+            className="md:px-3 md:py-1 md:text-xs text-sm lg:py-1 lg:px-4 py-1 px-3 rounded-full lg:text-lg font-medium text-white bg-[#238662] hover:bg-[#04563a] shadow-lg transition"
           >
             Resume
           </a>
@@ -100,7 +100,7 @@ export const Home: React.FC = () => {
           alt="Profile"
           width={624}
           height={560}
-          className="rounded-full w-[10rem] h-[20rem] md:w-[8rem] md:h-[16rem] lg:w-[10rem] lg:h-[20rem] object-cover shadow-lg border-4 border-white"
+          className="rounded-full w-[10rem] h-[20rem] md:w-[8rem] md:h-[16rem] lg:w-[24rem] lg:h-[23rem] object-cover  border-4 "
         />
       </motion.div>
     </section>
