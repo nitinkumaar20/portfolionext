@@ -72,25 +72,16 @@ const AboutMe = () => {
               MYSELF
             </motion.h3>
 
-            <h6 className="leading-6 text-gray-700">
-              Hi, I’m Nitin Kumar — a passionate Web Developer and Graphic
-              Designer with a strong foundation in Computer Science Engineering.
-              I specialize in building modern, user-friendly websites and
-              digital experiences that blend clean code with creative design.
+            <h6 className="leading-6 text-gray-700 mb-5">
+         Hi, I’m Nitin Kumar — a Web Developer and Graphic Designer with a Computer Science background. I craft modern, user-friendly websites and visuals that blend clean code with creative design.
             </h6>
 
             <h6 className="leading-6 text-gray-700 mt-4">
-              I have experience in{" "}
+             I specialize in{" "}
               <span className="text-teal-500 font-semibold">
-                Next.js, Tailwind CSS, TypeScript, React.js, Node.js, MongoDB,
-                JavaScript, HTML, CSS, Bootstrap, and Photoshop.
+           Next.js, Tailwind CSS, TypeScript, React.js, Node.js, MongoDB, JavaScript, HTML, CSS, Bootstrap, and Photoshop.
               </span>{" "}
-              I bring both functionality and aesthetics to every project.
-              Whether it's developing full-stack applications or crafting
-              compelling visuals, I love transforming ideas into impactful
-              digital solutions. I'm dedicated to guiding my clients through the
-              complete process — from concept to design, development, and launch
-              — ensuring quality, clarity, and performance at every stage.
+             blending clean code with creative design. Whether building robust full-stack apps or eye-catching visuals, I turn concepts into standout digital products.
             </h6>
           </motion.div>
         </div>

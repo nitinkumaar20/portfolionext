@@ -137,7 +137,7 @@ const Contact = () => {
                   placeholder="Enter message"
                   value={message.message}
                   onChange={onchange}
-                  className="w-full border rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full border  rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
 
