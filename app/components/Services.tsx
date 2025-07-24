@@ -42,7 +42,7 @@ const Services = () => {
             alt="Web Development"
             className="w-40 h-42 mb-4 rounded"
           />
-          <h2 className="text-xl font-semibold mb-2">Web Development</h2>
+          <h2 className="text-xl font-semibold mb-2 text-black">Web Development</h2>
           <p className="text-gray-600 text-sm">
             Crafting modern web experiences with React, Node.js, Express, MongoDB, and Bootstrap – fast, scalable, and beautifully designed
           </p>
@@ -62,7 +62,7 @@ const Services = () => {
             alt="Photoshop Editing"
             className="w-40 h-42 mb-4 rounded"
           />
-          <h2 className="text-xl font-semibold mb-2">Photoshop Editing</h2>
+          <h2 className="text-xl font-semibold mb-2 text-black">Photoshop Editing</h2>
           <p className="text-gray-600 text-sm ">
            High-quality Photoshop editing and retouching for eCommerce and personal photos.
           </p>
@@ -82,7 +82,7 @@ const Services = () => {
             alt="Graphic Design"
             className="w-40 h-42 mb-4 rounded"
           />
-          <h2 className="text-xl font-semibold mb-2">Graphic Design</h2>
+          <h2 className="text-xl font-semibold mb-2 text-black">Graphic Design</h2>
           <p className="text-gray-600 text-sm">
          I design eye-catching graphics for branding, Amazon banners, eCommerce stores, logos, and everything in between
           </p>
