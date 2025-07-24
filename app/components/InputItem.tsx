@@ -23,7 +23,7 @@ export const InputItem: React.FC<InputItemProps> = ({
 }) => {
   return (
     <div className="w-full  flex flex-col items-start  my-1 ">
-      <label htmlFor={id} className="text-md font-medium text-gray-600">
+      <label htmlFor={id} className="text-md font-medium ">
         {input}
       </label>
       <input

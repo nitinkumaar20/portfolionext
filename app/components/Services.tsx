@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section id="section-3" className="py-12 bg-white">
+    <section id="section-3" className="py-12 ">
       {/* Section Heading */}
       <div className="flex justify-center mb-6">
         <ul className="flex gap-3 text-3xl lg:text-4xl font-bold  tracking-widest">

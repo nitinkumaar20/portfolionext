@@ -13,8 +13,8 @@ const Footer = () => {
       <footer className="flex flex-col md:flex-row justify-between flex-wrap gap-12">
         {/* Contact and Social Links */}
         <motion.div className="flex-1 min-w-[280px]">
-          <h4 className="font-semibold text-xl mb-2">Get in Touch Social Links</h4>
-          <h6 className="text-sm text-gray-700 mb-4">
+          <h4 className="font-semibold text-xl mb-2 text-black">Get in Touch Social Links</h4>
+          <h6 className="text-sm text-gray-600 mb-4">
             You can contact me in different social links given below.
           </h6>
           <div className="flex gap-4 items-center">
@@ -65,7 +65,7 @@ const Footer = () => {
         {/* Quick Links */}
         <motion.div className="flex-1 min-w-[200px]">
           <h4 className="text-black font-semibold text-lg mb-4">Quick Links</h4>
-          <ul className="flex flex-col gap-3 text-base text-gray-900">
+          <ul className="flex flex-col gap-3 text-base text-gray-700">
             {["Home", "About", "Services", "Portfolio", "Contact"].map((link, idx) => (
               <motion.a
                 key={link}
@@ -90,7 +90,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <h4 className="text-black font-semibold text-lg mb-4">Our Services</h4>
-          <ul className="flex flex-col gap-3 text-base text-gray-900">
+          <ul className="flex flex-col gap-3 text-base text-gray-700">
             {["Web Designing & Development", "Photoshop Editing", "Graphic Designing"].map((service, idx) => (
               <motion.a
                 key={service}
