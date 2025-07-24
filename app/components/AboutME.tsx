@@ -15,7 +15,7 @@ const AboutMe = () => {
       id="section-2"
     >
       <motion.div className="flex justify-center mb-4">
-        <ul className="flex flex-wrap gap-2 text-xl md:text-4xl font-bold text-gray-800">
+        <ul className="flex flex-wrap gap-2 text-xl md:text-4xl font-bold ">
           {["A", "B", "O", "U", "T", "M", "E"].map((char, idx) => (
             <li key={idx} className="mx-2 sm:mx-4 mt-6">
               {char}
@@ -57,7 +57,7 @@ const AboutMe = () => {
             </motion.h3>
 
             <motion.h1
-              className="text-3xl sm:text-4xl font-semibold  text-gray-900"
+              className="text-3xl sm:text-4xl font-semibold  "
               variants={variants}
               transition={{ duration: 0.5 }}
             >
@@ -72,11 +72,11 @@ const AboutMe = () => {
               MYSELF
             </motion.h3>
 
-            <h6 className="leading-6 text-gray-700 mb-5">
+            <h6 className="leading-6 mb-5">
          Hi, I’m Nitin Kumar — a Web Developer and Graphic Designer with a Computer Science background. I craft modern, user-friendly websites and visuals that blend clean code with creative design.
             </h6>
 
-            <h6 className="leading-6 text-gray-700 mt-4">
+            <h6 className="leading-6  mt-4">
              I specialize in{" "}
               <span className="text-teal-500 font-semibold">
            Next.js, Tailwind CSS, TypeScript, React.js, Node.js, MongoDB, JavaScript, HTML, CSS, Bootstrap, and Photoshop.
