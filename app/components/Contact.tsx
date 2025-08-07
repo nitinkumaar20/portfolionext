@@ -127,7 +127,7 @@ const Contact = () => {
               />
 
               <div className="col-span-1 md:col-span-2">
-                <label htmlFor="message" className="block text-md font-medium text-gray-600 mb-1">
+                <label htmlFor="message" className="block text-md font-medium  mb-1">
                   Message
                 </label>
                 <textarea

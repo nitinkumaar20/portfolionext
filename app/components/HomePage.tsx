@@ -76,7 +76,8 @@ export const Home: React.FC = () => {
             Hire Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1zPmnn8iWWs65JJsfPhhZtZbPcu7DiuoU/view?usp=sharing"
+          // https://drive.google.com/file/d/1CuErroCb4birYQ6OR4jKNE38-ZRHvyh5/view?usp=sharing
+            href="https://drive.google.com/file/d/1CuErroCb4birYQ6OR4jKNE38-ZRHvyh5/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="md:px-3 md:py-1 md:text-xs text-sm lg:py-1 lg:px-4 py-1 px-3 rounded-full lg:text-lg font-medium text-white bg-[#238662] hover:bg-[#04563a] shadow-lg transition"
